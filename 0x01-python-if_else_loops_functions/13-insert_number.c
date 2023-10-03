@@ -1,36 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
+
 /**
- *insert_node - Function
- *
- *@head: input
- *@number: input
- *Return: listint_t
- */
+* insert_node - Function
+* @head: input
+* @number: input
+* Return:  listint_t
+*/
 listint_t *insert_node(listint_t **head, int number)
 {
-	listint_t *tmp, *new, *node;
+	listint_t *node;
+	listint_t *new_node;
 
-	tmp = *head;
-	new = malloc(sizeof(listint_t))
-	if (!new)
+	new_node = malloc(sizeof(listint_t));
+	if (!head || !(*head))
 	{
+		new_node->n = number;
+		new_node->next = NULL;
+		*head = new_node;
+		return (new_node);
+	}
+	node = *head;
+	if (!new_node)
+	{
+		free(new_node);
 		return (NULL);
 	}
-	new->n = number;
-	if (tmp == NULL || tmp->n > number)
+	if (number <= node->n)
 	{
-		new->next = tmp;
-		tmp = new;
+		new_node->n = number;
+		new_node->next = node;
+		node = new_node->next;
+		*head = new_node;
+		return (new_node);
 	}
-	else
+	while (node)
 	{
-		while (tmp->next && tmp->next->n < number)
+		if (!node->next)
+			return (add_nodeint_end(head, number));
+		if ((number > node->n) && (number <= (node->next)->n))
 		{
-			tmp = tmp->next;
+			new_node->n = number;
+			new_node->next = node->next;
+			node->next = new_node;
+			return (new_node);
 		}
-		node = tmp->next;
-		tmp->next = new;
-		new->next = node;
+		node = node->next;
 	}
-	return (*head);
+	free(new_node);
+	return (NULL);
 }
