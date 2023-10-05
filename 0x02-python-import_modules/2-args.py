@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 if __name__ == "__main__":
     import sys
 
@@ -8,8 +9,5 @@ if __name__ == "__main__":
         print("{} argument:".format(ln))
     else:
         print("{} arguments:".format(ln))
-    i = 1
-    for arg in sys.argv:
-        print("{:d}:{}".format(i,arg))
-                
-                
+    for i in range(ln):
+        print("{:d}:{}".format((sys.argv + 1), sys.args[i + 1]))
