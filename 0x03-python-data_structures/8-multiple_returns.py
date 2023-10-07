@@ -4,6 +4,6 @@ def multiple_returns(sentence):
         ln = len(sentence) 
         first_char = sentence[0]
         return (ln, first_char)
-    elif(sentence == 0):
+    else:
         ln = len(sentence)
         return(ln, None)
