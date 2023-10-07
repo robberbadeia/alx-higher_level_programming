@@ -5,4 +5,4 @@ def max_integer(my_list=[]):
         max = my_list[len(my_list) - 1]
         return(max)
     else:
-        return None
+        return "None"
