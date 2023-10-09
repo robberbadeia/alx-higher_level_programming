@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 /**
  *is_palindrom: Function to Check weather the list is palindrom 
  * or not
@@ -25,13 +26,14 @@ int is_palindrome(listint_t **head)
 	}
 	if (c % 2 == 0)
 	{
+		f = r = *head;
 		/**
 		 *Even Case
 		 */
-		for (j = 0; j <= (c / 2) - 1; j++)
+		for (j = 0; j < ((c/2)-1); j++)
 		{
-			r = r->next;
 			f = f->next;
+			r = r->next;
 		}
 		r = r->next;
 		if (f->n != r->n)
@@ -40,26 +42,6 @@ int is_palindrome(listint_t **head)
 		}
 		else
 		{
-			i = 0;
-			while (i < (c / 2) - 1)
-			{
-				for (j = 0; j < i; j++)
-				{
-					f = f->next;
-				}
-				for (j = 0; j < c - (1 + i); j++)
-				{
-					r = r->next;
-				}
-				if (f->n != r->n)
-				{
-					return (0);
-				}
-				else
-				{
-					i++;
-				}
-			}
 		}
 
 	}
