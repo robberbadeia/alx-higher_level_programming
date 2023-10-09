@@ -1,75 +1,40 @@
 #include "lists.h"
-#include <stdio.h>
 /**
- *is_palindrom: Function to Check weather the list is palindrom 
- * or not
- * @head: input
- * 
- *Return: 1 if palindrom 0 else 
-*/
+ * is_palindrome - Function
+ * @head: pointer
+ * Return: 0 if not, 1 if palindrome
+ */
 int is_palindrome(listint_t **head)
 {
-	int c = 0;
-	int i = 0, j;
-	listint_t *tmp, *f, *r;
+	listint_t *tmp = *head;
+	unsigned int size = 0, i = 0;
+	int data[10240];
 
-	if (!head)
+	if (head == NULL) /* non-existing list is not */
 		return (0);
-	if (!*head)
-		return (0);
-	
-	tmp = *head;
-	while (tmp)
+
+	if (*head == NULL) /* empty list is palindrome */
+		return (1);
+
+	while (tmp) /* find size of linked list */
 	{
 		tmp = tmp->next;
-		c++;
+		size += 1;
 	}
-	if (c % 2 == 0)
-	{
-		f = r = *head;
-		/**
-		 *Even Case
-		 */
-		for (j = 0; j < ((c/2)-1); j++)
-		{
-			f = f->next;
-			r = r->next;
-		}
-		r = r->next;
-		if (f->n != r->n)
-		{
-			return (0);
-		}
-		else
-		{
-		}
-
-	}
-	if (c % 2 != 0)
-	{
-		/**
-		 *Odd Case
-		 */
-		while (i != c / 2)
-		{
-			f = r = *head;
-			for (j = 0; j < i; j++)
-			{
-				f = f->next;
-			}
-			for (j = 0; j < c - (i + 1); j++)
-			{
-				r = r->next;
-			}
-			if (f->n != r->n)
-			{
-				return (0);
-			}
-			else
-			{
-				i++;
-			}
-		}
+	if (size == 1) /* single node list is palindrome */
 		return (1);
+
+	tmp = *head;
+	while (tmp) /* pull node data into array to compare */
+	{
+		data[i++] = tmp->n;
+		tmp = tmp->next;
 	}
+
+	for (i = 0; i <= (size/2); i++)
+	{
+		if (data[i] != data[size - i - 1])
+			return (0);
+	}
+	return (1);
 }
