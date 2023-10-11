@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def weight_average(my_list=[]):
     t1, t2 = zip(*my_list)
     _sum, _mul = 0, 0
