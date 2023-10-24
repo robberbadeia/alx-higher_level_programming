@@ -8,4 +8,4 @@ class Square:
     """_summary_
     """
     def __init__(sellf, size):
-        sellf._size = size
+        sellf._Square__size = size
