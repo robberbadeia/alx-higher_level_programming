@@ -4,6 +4,19 @@
 
 
 def add_integer(a, b=98):
+    """_summary_
+
+    Args:
+        a (_type_): _description_
+        b (int, optional): _description_. Defaults to 98.
+
+    Raises:
+        TypeError: _description_
+        TypeError: _description_
+
+    Returns:
+        _type_: _description_
+    """
     sum = 0
     if (type(a) != int and type(a) != float):
         raise TypeError("a must be an integer")
@@ -13,5 +26,7 @@ def add_integer(a, b=98):
     return (sum)
 
 if __name__ == "__main__":
+    """_import doctest module_
+    """
     import doctest
     doctest.testfile("tests/0-add_integer.txt")
