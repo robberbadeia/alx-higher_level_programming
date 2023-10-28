@@ -1,0 +1,54 @@
+Import function from file
+>>> add_integer = __import__('0-add_integer').add_integer
+
+Expected Success:
+
+Pass two positive int :
+>>> add_integer(3, 5)
+8
+
+Pass one negative nuber :
+>>> add_integer(-2,2)
+0
+
+pass folatin numbers :
+>>> add_integer(1.5,2.4)
+3
+
+pass negative float number :
+>>> add_integer(-2.3,2.5)
+0
+
+use Default number of b:
+>>> add_integer(2)
+100
+
+Expected Fail:
+
+Pass one strinf :
+>>> add_integer('a', 5)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+Pass two strings :
+>>> add_integer('k','l')
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+pass one argument:
+>>> add_integer(None)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>> add_integer(1, 2, 3)
+Traceback (most recent call last):
+...
+TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+>>> add_integer("hi", "world")
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
