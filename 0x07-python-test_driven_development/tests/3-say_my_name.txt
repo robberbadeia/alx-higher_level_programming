@@ -1,0 +1,37 @@
+Import function from file
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Epected Success:
+
+>>> say_my_name("Adle", "Hatem")
+My name is Adle Hatem
+
+>>> say_my_name("adle")
+My name is adle 
+
+Expected Fail:
+
+>>> say_my_name("Adle", 5)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+>>> say_my_name(6, "Adle")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+>>> say_my_name(None)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+>>> say_my_name(None, "adle")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+>>> say_my_name("Adle", "adle", "Hany")
+Traceback (most recent call last):
+...
+TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
