@@ -1,18 +1,10 @@
 #!/usr/bin/python3
-"""Rectangle Class
-
-    Raises:
-        TypeError: if width not int
-        ValueError: if width < 0
-        TypeError: if height not int
-        ValueError: if height < 0
-"""
+"""Rectangle Class"""
 
 
 class Rectangle:
-    """Class Defination
-    """
-    number_of_instances = 0
+    """Class Defination"""
+    number_of_instances = int(0)
 
     def __init__(self, width=0, height=0):
         """Rectangle Intialization
