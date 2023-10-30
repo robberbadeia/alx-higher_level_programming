@@ -4,4 +4,5 @@
 
 
 class Rectangle:
+    """Regtangle Class"""
     pass
