@@ -74,7 +74,7 @@ class Rectangle:
 
     def __repr__(self):
         """prints a rectangle using '#'"""
-        return ("Rectangle ({}, {})".format(self.__width, self.__height))
+        return ("Rectangle({}, {})".format(self.__width, self.__height))
 
     def __del__(self):
         """Delete instance"""
