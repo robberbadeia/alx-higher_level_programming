@@ -76,10 +76,6 @@ class Rectangle:
         """prints a rectangle using '#'"""
         return ("Rectangle ({}, {})".format(self.__width, self.__height))
 
-    def eval(self):
-        """eval function that return new instance of this class"""
-        return self.__class__()
-
     def __del__(self):
         """Delete instance"""
         print("Bye rectangle...")
