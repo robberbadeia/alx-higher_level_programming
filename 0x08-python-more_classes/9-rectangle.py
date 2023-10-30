@@ -99,4 +99,5 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
+        """Return Square"""
         return (cls(size, size))
