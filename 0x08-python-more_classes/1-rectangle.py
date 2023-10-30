@@ -12,6 +12,7 @@
 class Rectangle:
     """Class Defination
     """
+
     def __init__(self, width=0, height=0):
         """_summary_
 
