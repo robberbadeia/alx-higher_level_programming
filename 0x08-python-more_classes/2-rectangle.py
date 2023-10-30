@@ -50,3 +50,7 @@ class Rectangle:
         if (self.__height == 0):
             return 0
         return (2 * (self.__height + self.__width))
+    
+    def area(self):
+        """Calculate rectangler area"""
+        return((self.__height) * (self.__width))
