@@ -3,7 +3,17 @@
 
 
 class Rectangle:
-    """Representation"""
+    """_summary_
+
+    Raises:
+        TypeError: _description_
+        ValueError: _description_
+        TypeError: _description_
+        ValueError: _description_
+
+    Returns:
+        _type_: _description_
+    """
 
     number_of_instances = 0
 
