@@ -3,7 +3,20 @@
 
 
 class Rectangle:
-    """Representation"""
+    """_summary_
+
+    Raises:
+        TypeError: _description_
+        ValueError: _description_
+        TypeError: _description_
+        ValueError: _description_
+        
+    Attributes:
+        number_of_instances (int): number of instances created and not deleted
+
+    Returns:
+        _type_: _description_
+    """
 
     number_of_instances = 0
 
@@ -13,11 +26,10 @@ class Rectangle:
         Args:
             width (int):The width of the new rectangle.
             height (int):The height of the new rectangle.
-            number_of_instances:Number of instaces
         """
         self.width = width
         self.height = height
-        self.number_of_instances += 1
+        type(self).number_of_instances += 1
 
     @property
     def width(self):
@@ -80,5 +92,5 @@ class Rectangle:
 
     def __del__(self):
         """prints a rectangle using '#'"""
-        self.number_of_instances -= 1
         print("Bye rectangle...")
+        type(self).number_of_instances -= 1
