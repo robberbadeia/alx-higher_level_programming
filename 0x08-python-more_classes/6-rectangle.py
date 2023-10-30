@@ -13,6 +13,7 @@ class Rectangle:
         Args:
             width (int):The width of the new rectangle.
             height (int):The height of the new rectangle.
+            number_of_instances:Number of instaces
         """
         self.width = width
         self.height = height
