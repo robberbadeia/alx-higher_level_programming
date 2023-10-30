@@ -46,9 +46,9 @@ class Rectangle:
     def perimeter(self):
         """Claculate Rectangler preimeter"""
         if (self.__height == 0):
-            return 0
+            return (0)
         if (self.__height == 0):
-            return 0
+            return (0)
         return (2 * (self.__height + self.__width))
     
     def area(self):
