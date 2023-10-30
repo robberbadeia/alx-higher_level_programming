@@ -75,7 +75,7 @@ class Rectangle:
 
     def __repr__(self):
         """prints a rectangle using '#'"""
-        return ("Rectangle ({}, {})".format(self.__width, self.__height))
+        return ("Rectangle({:d}, {:d})".format(self.__width, self.__height))
 
     def eval(self):
         """eval function that return new instance of this class"""
@@ -83,7 +83,7 @@ class Rectangle:
 
     def __del__(self):
         """Delete a Regtangle Class"""
-        type(self).number_of_instances += 1
+        type(self).number_of_instances -= 1
         print("Bye rectangle...")
 
     @staticmethod
