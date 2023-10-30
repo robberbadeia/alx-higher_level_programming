@@ -4,7 +4,7 @@
 
 class Rectangle:
     """Class Defination"""
-    number_of_instances = int(0)
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """Rectangle Intialization
@@ -69,5 +69,5 @@ class Rectangle:
 
     def __del__(self):
         """Delete instance"""
-        print("Bye rectangle...")
         type(self).number_of_instances -= 1
+        print("Bye rectangle...")
