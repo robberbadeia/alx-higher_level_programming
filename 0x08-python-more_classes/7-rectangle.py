@@ -62,20 +62,23 @@ class Rectangle:
         return (2 * (self.__height + self.__width))
 
     def __str__(self):
-        """prints a rectangle using '#'"""
+        """Return the printable representation of the Rectangle.
+
+        Represents the rectangle with the # character.
+        """
         if self.__width == 0 or self.__height == 0:
             return ("")
+
         pic = []
-        for row in range(self.__height):
-            for ele in range(self.__width):
-                pic.append(str(self.print_symbol))
-            if (row != self.__height - 1):
-                pic.append("\n")
-        return("".join(pic))
+        for i in range(self.__height):
+            [pic.append('#') for j in range(self.__width)]
+            if i != self.__height - 1:
+                pic.append('\n')
+        return ("".join(pic))
 
     def __repr__(self):
         """prints a rectangle using '#'"""
-        return ("Rectangle({}, {})".format(self.__width, self.__height))
+        return ("Rectangle({:d}, {:d})".format(self.__width, self.__height))
 
     def __del__(self):
         type(self).number_of_instances -= 1
