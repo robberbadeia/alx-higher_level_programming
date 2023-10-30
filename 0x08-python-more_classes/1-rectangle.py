@@ -13,7 +13,11 @@ class Rectangle:
     """Class Defination
     """
     def __init__(self, width=0, height=0):
-        """Rectangle Intialization
+        """_summary_
+
+        Args:
+            width (int, optional): _description_. Defaults to 0.
+            height (int, optional): _description_. Defaults to 0.
         """
         self.height = height
         self.width = width
