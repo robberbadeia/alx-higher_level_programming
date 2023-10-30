@@ -59,10 +59,10 @@ class Rectangle:
         """prints a rectangle using '#'"""
         if self.__width == 0 or self.__height == 0:
             return ("")
+
         pic = []
         for row in range(self.__height):
-            for ele in range(self.__width):
-                pic.append("#")
+            [pic.append('#') for ele in range(self.__width)]
             if (row != self.__height - 1):
                 pic.append("\n")
         return("".join(pic))
