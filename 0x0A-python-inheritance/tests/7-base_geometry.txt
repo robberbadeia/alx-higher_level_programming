@@ -1,0 +1,45 @@
+Import Function :
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Expected Success:
+
+>>> base_geometry = BaseGeometry()
+>>> integer_validator = base_geometry.integer_validator
+>>> integer_validator('int', 4)
+
+>>> integer_validator('int', 2)
+
+>>> integer_validator('int', 6)
+
+Expected Fail:
+
+>>> integer_validator('int', 0)
+Traceback (most recent call last):
+...
+ValueError: {} must be greater than 0
+
+>>> integer_validator('int', -1)
+Traceback (most recent call last):
+...
+ValueError: {} must be greater than 0
+
+>>> integer_validator('int', -10)
+Traceback (most recent call last):
+...
+ValueError: {} must be greater than 0
+
+>>> integer_validator()
+Traceback (most recent call last):
+...
+TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> integer_validator('int', -10, 9)
+Traceback (most recent call last):
+...
+TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 4 were given
+
+>>> integer_validator(4, -10)
+Traceback (most recent call last):
+...
+ValueError: {} must be greater than 0
