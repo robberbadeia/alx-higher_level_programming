@@ -28,3 +28,9 @@ ValueError: {} must be greater than 0
 Traceback (most recent call last):
 ...
 ValueError: {} must be greater than 0
+
+>>> area = base_geometry.area
+>>> area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
