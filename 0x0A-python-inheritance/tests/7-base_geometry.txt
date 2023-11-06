@@ -19,7 +19,7 @@ Traceback (most recent call last):
 ...
 ValueError: {} must be greater than 0
 
->>> integer_validator('int', -1)
+>>> integer_validator()
 Traceback (most recent call last):
 ...
-ValueError: {} must be greater than 0
+TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
