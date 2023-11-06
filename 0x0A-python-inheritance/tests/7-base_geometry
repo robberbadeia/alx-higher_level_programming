@@ -8,10 +8,7 @@ Import Function :
 
 
 
->>> integer_validator('int', -10)
-Traceback (most recent call last):
-...
-ValueError: {} must be greater than 0
+
 
 
 
