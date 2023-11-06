@@ -29,3 +29,17 @@ Expected Success:
 ['a', 'b', 'd', 'c', 'z']
 >>> my_list.print_sorted()
 ['a', 'b', 'c', 'd', 'z']
+
+Expected Fail:
+
+>>> my_list = MyList()
+>>> print(my_list)
+[]
+>>> my_list.print_sorted()
+[]
+
+>>> my_list = MyList([1, "samy", "ahmed", 5])
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+...
+TypeError: '<' not supported between instances of 'str' and 'int'
