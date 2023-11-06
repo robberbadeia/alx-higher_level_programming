@@ -43,3 +43,9 @@ Expected Fail:
 Traceback (most recent call last):
 ...
 TypeError: '<' not supported between instances of 'str' and 'int'
+
+>>> my_list = None
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+...
+AttributeError: 'NoneType' object has no attribute 'print_sorted'
