@@ -11,3 +11,10 @@ Expected Success:
 >>> integer_validator('int', 2)
 
 >>> integer_validator('int', 6)
+
+Expected Fail:
+
+>>> integer_validator('int', 0)
+Traceback (most recent call last):
+...
+ValueError: {} must be greater than 0
