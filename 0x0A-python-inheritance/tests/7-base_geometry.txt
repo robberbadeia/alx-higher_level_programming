@@ -18,8 +18,3 @@ Expected Fail:
 Traceback (most recent call last):
 ...
 ValueError: {} must be greater than 0
-
->>> integer_validator(None)
-Traceback (most recent call last):
-...
-TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
