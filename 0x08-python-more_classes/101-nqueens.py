@@ -15,8 +15,6 @@ def argChecker(args):
         exit(1)
 
 
-
-
 if __name__ == "__main__":
     args = sys.argv
     argChecker(args)
