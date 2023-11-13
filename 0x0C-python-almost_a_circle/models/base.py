@@ -43,15 +43,20 @@ class Base():
             file.write(cls.to_json_string(lst))
 
     @classmethod
-    def save_to_file_csv(cls, list_objs):
-        filename = cls.__name__ + ".csv"
-        with open(filename, 'w', newline='') as f:
-            writer = csv.writer(f)
-            for o in list_objs:
-                if cls.__name__ == "Rectangle":
-                    writer.writerow([o.id, o.width, o.height, o.x, o.y])
-                if cls.__name__ == "Square":
-                    writer.writerow([o.id, o.size, o.x, o.y])
+    def create(cls, **dictionary):
+        """Return a class instantied from a dictionary of attributes.
+
+        Args:
+            **dictionary (dict): Key/value pairs of attributes to initialize.
+        """
+        if dictionary and dictionary != {}:
+            if cls.__name__ == "Rectangle":
+                new = cls(1, 1)
+            else:
+                new = cls(1)
+            new.update(**dictionary)
+            return new
+
     @classmethod
     def save_to_file_csv(cls, list_objs):
         filename = cls.__name__ + ".csv"
