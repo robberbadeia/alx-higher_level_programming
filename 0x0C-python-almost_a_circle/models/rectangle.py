@@ -17,14 +17,17 @@ class Rectangle(Base):
     def width(self):
         """width getter"""
         return self.__width
+
     @property
     def height(self):
         """height getter"""
         return self.__height
+
     @property
     def x(self):
         """x getter"""
         return self.__x
+
     @property
     def y(self):
         """y getter"""
@@ -47,7 +50,7 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("height must be > 0")
         self.__height = value
-        
+
     @x.setter
     def x(self, value):
         """x setter"""
@@ -85,7 +88,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """Retur setring"""
-        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height))
+        return ("[Rectangle] ({}) {}/{} - {}/{}\
+                ".format(self.id, self.x, self.y, self.width, self.height))
 
     def update(self, *args, **kwargs):
         """assigns an argument to each attribute"""
@@ -121,6 +125,14 @@ class Rectangle(Base):
                     self.x = v
                 if k == "y":
                     self.y = v
+
     def to_dictionary(self):
         """to dict function"""
-        return {"x": self.x, "y": self.y, "id": self.id, "height": self.height, "width": self.width}
+        dic = {
+            "x": self.x,
+            "y": self.y,
+            "id": self.id,
+            "height": self.height,
+            "width": self.width
+        }
+        return dic
