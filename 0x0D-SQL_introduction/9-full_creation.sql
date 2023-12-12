@@ -8,9 +8,11 @@ CREATE TABLE IF NOT EXISTS
         name VARCHAR(2560),
         score INT
     );
-
 -- Insert Mltiple Rows
-INSERT INTO second_table VALUES (1, "John", 10)
-INSERT INTO second_table VALUES (2, "Alex", 3)
-INSERT INTO second_table VALUES (3, "Bob", 14)
-INSERT INTO second_table VALUES (4, "George", 8)
+INSERT INTO
+    second_table
+VALUES
+    (1, "John", 10)و
+    (2, "Alex", 3)و
+    (3, "Bob", 14)و
+    (4, "George", 8)
