@@ -6,7 +6,7 @@ SELECT
     states.name
 FROM
     states 
-    FULL OUTER JOIN
+JOIN
     cities
 WHERE
     states.id = cities.state_id
