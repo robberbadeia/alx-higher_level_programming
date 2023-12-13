@@ -9,4 +9,4 @@ FROM
 WHERE
     state_id = 1
 ORDER BY
-    id ASC
+    id ASC;
