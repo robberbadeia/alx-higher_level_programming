@@ -7,7 +7,7 @@ SELECT
 FROM
     cities
 WHERE
-    state_id = 1
+    state_id = (SELECT id FROM states WHERE name = "California")
 GROUP BY
     id
 ORDER BY
