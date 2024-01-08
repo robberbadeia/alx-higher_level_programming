@@ -8,4 +8,4 @@ function secondBigInt (lst) {
     return (lst.sort().reverse()[1]);
   }
 }
-console.log(secondBigInt(process.argv.slice(2)));
+console.log(secondBigInt(process.argv.slice()));
