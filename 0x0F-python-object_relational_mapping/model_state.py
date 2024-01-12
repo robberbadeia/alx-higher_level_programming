@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """
-T06: Write a python file that
-contains the class definition of a State
-and an instance Base = declarative_base()
+Defines class State
 """
 
 from sqlalchemy import Column, Integer, String
@@ -13,7 +11,5 @@ Base = declarative_base()
 
 class State(Base):
     __tablename__ = "states"
-    id = Column(Integer,
-                primary_key=True,
-                nullable=False)
+    id = Column(Integer, nullable=False, primary_key=True)
     name = Column(String(128), nullable=False)
