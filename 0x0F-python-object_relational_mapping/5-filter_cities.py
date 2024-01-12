@@ -26,9 +26,11 @@ if __name__ == "__main__":
             ON
                 states.id = cities.state_id
             WHERE
-                states.name LIKE %s
+                states.name = %s
+            GROUP BY
+                cities.name
             ORDER BY
-                cities.id ASC
+                cities.name DESC
             '''
     cursor.execute(query, (argv[4], ))
     rows = cursor.fetchall()
