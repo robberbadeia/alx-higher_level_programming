@@ -35,8 +35,7 @@ if __name__ == "__main__":
     cursor.execute(query, (argv[4], ))
     rows = cursor.fetchall()
 
-    for row in rows:
-        print(row[0], )
+    print(', '.join(["{:s}".format(row[0]) for row in rows]))
 
     cursor.close()
     db.close()
