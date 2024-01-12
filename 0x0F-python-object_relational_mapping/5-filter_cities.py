@@ -33,7 +33,7 @@ if __name__ == "__main__":
     cursor.execute(query, (argv[4], ))
     rows = cursor.fetchall()
 
-    print(', '.join(["{:s}".format(row[0]) for row in cursor.fetchall()]))
+    print(', '.join(["{:s}".format(row) for row in cursor.fetchall()]))
 
     cursor.close()
     db.close()
