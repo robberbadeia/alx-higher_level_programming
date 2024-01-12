@@ -26,7 +26,7 @@ if __name__ == "__main__":
             ON
                 states.id = cities.state_id
             WHERE
-                states.name = %s
+                states.name LIKE %s
             ORDER BY
                 cities.id ASC
             '''
