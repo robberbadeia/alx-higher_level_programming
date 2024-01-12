@@ -11,5 +11,5 @@ Base = declarative_base()
 
 class State(Base):
     __tablename__ = "states"
-    id = Column(Integer, nullable=True, primary_key=True, autoincrement=True)
+    id = Column(Integer)
     name = Column(String(128))
