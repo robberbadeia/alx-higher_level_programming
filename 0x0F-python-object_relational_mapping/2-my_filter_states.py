@@ -20,10 +20,10 @@ if __name__ == "__main__":
     query = '''
             SELECT *
             FROM states
-            WHERE name = %s
-            ORDER BY id ASC
-            '''
-    cursor.execute(query, (argv[4]))
+            WHERE name
+            LIKE '{:s}'
+            ORDER BY id ASC'''.format(argv[4])
+    cursor.execute(query)
     rows = cursor.fetchall()
     for row in rows:
         if row[1] == argv[4]:
