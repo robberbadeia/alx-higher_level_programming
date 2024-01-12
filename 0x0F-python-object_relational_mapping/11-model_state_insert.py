@@ -25,5 +25,5 @@ if __name__ == "__main__":
     session.add(instance)
     session.commit()
 
-    state = session.query(State).filter(State.name.__eq__('Louisiana'))
     print("{}".format(instance.id))
+    session.close()
