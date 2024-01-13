@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-script that creates the State “California”
-with the City “San Francisco” from the database hbtn_0e_100_usa
+script that lists all State objects,
+and corresponding City objects,
+contained in the database hbtn_0e_101_usa
 """
 import sys
 from model_state import Base, State
@@ -19,10 +20,7 @@ if __name__ == "__main__":
                                    sys.argv[3]), pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-
-    states = session.query(State)
-
-    for state in states:
+    for state in session.query(State).all():
         print("{}: {}".format(state.id, state.name))
         for city in state.cities:
             print("\t{}: {}".format(city.id, city.name))
