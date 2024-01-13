@@ -21,7 +21,6 @@ if __name__ == "__main__":
     session = Session()
     session.query(State).\
         filter(State.id.__eq__(2)).\
-            first().\
                 update(State.name.__eq__('New Mexico'))
     session.commit()
     session.close()
