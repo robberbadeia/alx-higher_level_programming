@@ -9,13 +9,12 @@ import sys
 
 
 if __name__ == "__main__":
-    """Connecting"""
+    """Implementation"""
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
         sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
-    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    result = session.query(State).order_by(State.id,City.id)
+    result = session.query(State).order_by(State.id)
     for st in result:
         print("{}: {}".format(st.id, st.name))
         for ct in st.cities:
