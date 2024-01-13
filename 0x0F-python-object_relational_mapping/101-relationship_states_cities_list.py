@@ -18,10 +18,14 @@ if __name__ == "__main__":
                            .format(sys.argv[1],
                                    sys.argv[2],
                                    sys.argv[3]), pool_pre_ping=True)
+    Base.metadata.create_all(engine)
+
     Session = sessionmaker(bind=engine)
     session = Session()
 
     states = session.query(State).all().order_by(State.id, City.id)
-
-
+    for state in session.query(State).order_by(State.id):
+        print(state.id, state.name, sep=": ")
+        for cities in state.cities:
+            print("\t{}: {}".format(cities.id, cities.name))
     session.close()
