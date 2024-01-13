@@ -22,6 +22,6 @@ if __name__ == "__main__":
     session.query(State).\
         filter(State.id.__eq__(2)).\
             first().\
-                pdate(State.name.__eq__('New Mexico'))
+                update(State.name.__eq__('New Mexico'))
     session.commit()
     session.close()
