@@ -19,4 +19,3 @@ if __name__ == "__main__":
         print("{}: {}".format(st.id, st.name))
         for ct in st.cities:
             print("\t{}: {}".format(ct.id, ct.name))
-    session.close()
