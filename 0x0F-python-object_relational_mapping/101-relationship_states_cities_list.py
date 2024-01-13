@@ -14,7 +14,7 @@ if __name__ == "__main__":
         sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    result = session.query(State).order_by(State.id)
+    result = session.query(State)
     for st in result:
         print("{}: {}".format(st.id, st.name))
         for ct in st.cities:
